@@ -1,96 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --cor-fundo: #211510;
+    --cor-principal: #38231b;
+    --cor-secundaria: #62402d;
+    --cor-destaque: #ffb347;
+    --cor-texto: #fff1df;
+    --cor-correta: #4caf50;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff3e6;
-    color: #503326;
-    text-align: center;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
-}
-
-header {
-    background-color: #a84321;
-    color: white;
-    padding: 25px 15px;
-}
-
-header h1 {
-    margin-top: 0;
-}
-
-main {
-    max-width: 700px;
-    margin: 25px auto;
     padding: 20px;
 }
 
-.receita {
-    background-color: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px #0002;
-}
-
-img {
+.caixa-principal {
+    background-color: var(--cor-principal);
     width: 100%;
-    max-width: 400px;
-    border-radius: 12px;
+    max-width: 650px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #0005;
 }
 
-h2 {
-    color: #a84321;
+h1,
+.caixa-perguntas,
+.caixa-resultado {
+    font-family: 'Chakra Petch', sans-serif;
 }
 
-header h1 {
-    color: white;
+h1 {
+    color: var(--cor-destaque);
+    font-size: 2rem;
 }
 
-li {
-    margin: 12px 0;
-    text-align: left;
+.tela-inicial p {
+    line-height: 1.8;
 }
 
 button {
-    background-color: #d96b35;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    margin: 8px;
-    border-radius: 8px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 16px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #a84321;
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
 }
 
-#dica,
-#mensagem {
-    font-weight: bold;
-    color: #a84321;
-}
-
-.sobre {
-    padding: 20px;
+.iniciar-btn,
+.novamente-btn {
     margin-top: 20px;
 }
 
-footer {
-    background-color: #a84321;
-    color: white;
-    padding: 15px;
-    margin-top: 30px;
+.caixa-perguntas {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 25px 0;
+    line-height: 1.6;
 }
 
-footer p {
-    margin: 0;
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-@media (max-width: 600px) {
-    main {
-        padding: 12px;
+.caixa-alternativas button {
+    text-align: left;
+}
+
+.caixa-alternativas button:disabled {
+    cursor: default;
+    opacity: 0.9;
+}
+
+.caixa-resultado {
+    display: none;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.escondido {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .caixa-principal {
+        padding: 20px;
     }
 
-    .receita {
-        padding: 18px;
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .caixa-perguntas {
+        font-size: 1.1rem;
     }
 }
