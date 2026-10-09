@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff3e6;
+    color: #503326;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: #a84321;
+    color: white;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+main {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+.receita {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #0002;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #a84321;
+}
+
+header h1 {
+    color: white;
+}
+
+li {
+    margin: 12px 0;
+    text-align: left;
+}
+
+button {
+    background-color: #d96b35;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #a84321;
+}
+
+#dica,
+#mensagem {
+    font-weight: bold;
+    color: #a84321;
+}
+
+.sobre {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #a84321;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 12px;
+    }
+
+    .receita {
+        padding: 18px;
+    }
+}
